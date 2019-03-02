@@ -12,9 +12,14 @@ from [https://www.lynda.com/Java-tutorials/ArrayLists/534633/594588-4.html?srch
 %0asa%3atrue%0aproducttypeid%3a2](https://www.lynda.com/Java-tutorials/ArrayLists/534633/594588-4.html?srchtrk=index%3a2%0alinktypeid%3a2%0aq%3adata+structures%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)
 
 Preview:
+--------
 https://github.com/GianPDev/-2018-03-_Module_1.1_ArrayLists/blob/master/Screenshots/ArrayList.webm
 
-\-----------
+Bugs
+------
+
+- Typing anything other than an Int when removing a value, will create an infinite loop.
+
 
 Notes
 -----
