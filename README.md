@@ -42,3 +42,16 @@ Difficulty:
 
 -   In Haxe, it is easy to get the length of the array by getting
     arrayOfThings.length
+
+-   Haxe Arrays is declared similar to C++ vectors  
+    Haxe:  
+    `var arrayOfThings:Array<String>;`  
+    C++:  
+    `using namespace std;`  
+    `vector<string> arrayOfThings;`
+
+-   Getting the size of an array or vector is an unsigned int. I had warnings
+    because I just made signed int for my for loop iterators
+
+-   In C++, functions must be placed before main (need to test if this is
+    necessary in Haxe)
