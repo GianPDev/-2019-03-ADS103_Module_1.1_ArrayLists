@@ -11,7 +11,11 @@ Lynda.com. (n.d.). Array Lists. From Java: Data Structures. Retrieved
 from [https://www.lynda.com/Java-tutorials/ArrayLists/534633/594588-4.html?srchtrk=index%3a2%0alinktypeid%3a2%0aq%3adata+structures%0apage%3a1%0as%3arelevance
 %0asa%3atrue%0aproducttypeid%3a2](https://www.lynda.com/Java-tutorials/ArrayLists/534633/594588-4.html?srchtrk=index%3a2%0alinktypeid%3a2%0aq%3adata+structures%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)
 
- 
+Preview:
+
+<video width="1280" height="720" controls preload>
+  <source src="https://github.com/GianPDev/-2018-03-_Module_1.1_ArrayLists/blob/master/Screenshots/ArrayList.webm" type="video/webm" />
+</video>
 
 \-----------
 
