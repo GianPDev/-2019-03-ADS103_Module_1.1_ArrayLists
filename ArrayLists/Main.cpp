@@ -88,7 +88,7 @@ int main()
 		{
 			cout << "Enter Index Number to Remove: " << endl;
 			cin >> remove;
-			cout << "Enter Index Number to Remove: " << endl;
+			cout << endl;
 
 			if (remove > -1 || remove < groceriesList02.size())
 			{
