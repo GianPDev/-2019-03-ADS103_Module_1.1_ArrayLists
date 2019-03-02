@@ -12,9 +12,29 @@ void printVector(vector<string> v)
 	for (unsigned int i = 0; (i < v.size()); i++)
 	{
 		//adds item number with . then adds item name via index of item
-		cout << i + 1 << ". " << v[i] << endl;
+		cout << i << ". " << v[i] << endl;
 	}
 	cout << endl;
+}
+
+bool removeElementByIndex(vector<string> vector, unsigned int index)
+{
+	cout << "Enter Index Number to Remove: " << endl;
+	
+	if (index > -1 || index < vector.size())
+	{
+		vector.erase(vector.begin()+index);
+		vector.shrink_to_fit();
+		cout << "Updated List (Items: " << vector.size() << "):" << endl;
+		printVector(vector);
+		return true;
+	}
+
+	else
+	{
+		cout << index << " is an invalid Number, try again:" << endl;
+		return false;
+	}
 }
 
 int main()
@@ -36,6 +56,7 @@ int main()
 
 	string item; //To enter new items
 	string command; //To determine whether or not to continue adding items
+	unsigned int remove;
 	bool finished = false; //to finish or keep while loop going
 	vector<string> groceriesList02;
 
@@ -55,20 +76,34 @@ int main()
 	//While loop used to indefinitely add items until user inputs n to end it
 	while (finished == false)
 	{
-		cout << "\nEnter new Item:" << endl;
-		cin >> item; //User inputs item to add to vector
-		cout << endl;
-		
-		groceriesList02.push_back(item); //Pushes item to the end of the array
-		cout << "Updated List (Items: " << groceriesList02.size() << "):" << endl;
-		printVector(groceriesList02);
-		
-		cout << "Continue? (y / n)" << endl;
+		cout << "Add, Remove or Exit ((a)dd / (r)emove / (e)xit):" << endl;
 		cin >> command;
-		if (command == "n" || command == "N")
+		if (command == "e" || command == "E")
 		{
 			finished = true;
 		}
+		else if (command == "r" || command == "R")
+		{
+			cout << "Enter Index Number to Remove: " << endl;
+			bool valid = false;
+			while (valid == false)
+			{
+				cin >> remove;
+				valid = removeElementByIndex(groceriesList02, remove);
+			}
+		}
+		else if (command == "a" || command == "A")
+		{
+			cout << "\nEnter new Item:" << endl;
+			cin >> item; //User inputs item to add to vector
+			cout << endl;
+			groceriesList02.push_back(item);
+
+			cout << "Updated List (Items: " << groceriesList02.size() << "):" << endl;
+			printVector(groceriesList02);
+		}
+		
+		command = "";
 	}
 
 	cout << endl;
