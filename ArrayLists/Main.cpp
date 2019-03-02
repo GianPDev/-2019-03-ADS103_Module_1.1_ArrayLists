@@ -18,6 +18,8 @@ void printVector(vector<string> v)
 	cout << endl;
 }
 
+//No longer used, only temporarily changes vector?
+/*
 static void removeElementByIndex(vector<string> vector, unsigned int index)
 {
 	cout << "Enter Index Number to Remove: " << endl;
@@ -35,6 +37,7 @@ static void removeElementByIndex(vector<string> vector, unsigned int index)
 		cout << index << " is an invalid Number, try again:" << endl;
 	}
 }
+*/
 
 int main()
 {
