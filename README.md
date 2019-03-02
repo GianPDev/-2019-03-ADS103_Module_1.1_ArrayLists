@@ -26,13 +26,11 @@ Indexed, add/remove elements by index.
 
  
 
-Difficulty:
+Difficulties / Notes:
 
 -   In the language I learned; Haxe, Arrays can dynamically change size or be at
     a fixed size depending on how it’s created, so it was a surprise that Arrays
     in C++ are only fixed size.
-
--   I only recently started learning C++.
 
 -   The task only specifies creating “your own list of including at least 5
     items”, does not specify if you need to create a List or a ArrayList data
