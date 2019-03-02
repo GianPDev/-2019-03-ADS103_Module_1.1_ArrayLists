@@ -75,7 +75,7 @@ int main()
 	cout << "Groceries List (String Vector) (Items: " << groceriesList02.size() << "):" << endl;
 	printVector(groceriesList02);
 	
-	//While loop used to indefinitely add items until user inputs n to end it
+	//While loop used to indefinitely add items until user inputs e/E to end it
 	while (finished == false)
 	{
 		cout << "Add, Remove or Exit ((a)dd / (r)emove / (e)xit):" << endl;
