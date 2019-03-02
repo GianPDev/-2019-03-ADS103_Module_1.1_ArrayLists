@@ -8,6 +8,7 @@ using namespace std;
 
 void printVector(vector<string> v)
 {
+
 	//gets vector length and iterates length amount of times
 	for (unsigned int i = 0; (i < v.size()); i++)
 	{
@@ -17,23 +18,21 @@ void printVector(vector<string> v)
 	cout << endl;
 }
 
-bool removeElementByIndex(vector<string> vector, unsigned int index)
+static void removeElementByIndex(vector<string> vector, unsigned int index)
 {
 	cout << "Enter Index Number to Remove: " << endl;
 	
 	if (index > -1 || index < vector.size())
 	{
-		vector.erase(vector.begin()+index);
-		vector.shrink_to_fit();
+		vector.erase(vector.begin()+index); //Deletes value at index
+		vector.shrink_to_fit(); //Moves values' indexes to fill in gaps
 		cout << "Updated List (Items: " << vector.size() << "):" << endl;
 		printVector(vector);
-		return true;
 	}
 
 	else
 	{
 		cout << index << " is an invalid Number, try again:" << endl;
-		return false;
 	}
 }
 
@@ -85,11 +84,20 @@ int main()
 		else if (command == "r" || command == "R")
 		{
 			cout << "Enter Index Number to Remove: " << endl;
-			bool valid = false;
-			while (valid == false)
+			cin >> remove;
+			cout << "Enter Index Number to Remove: " << endl;
+
+			if (remove > -1 || remove < groceriesList02.size())
 			{
-				cin >> remove;
-				valid = removeElementByIndex(groceriesList02, remove);
+				groceriesList02.erase(groceriesList02.begin() + remove); //Deletes value at index
+				groceriesList02.shrink_to_fit(); //Moves values' indexes to fill in gaps
+				cout << "Updated List (Items: " << groceriesList02.size() << "):" << endl;
+				printVector(groceriesList02);
+			}
+
+			else
+			{
+				cout << remove << " is an invalid Number, try again:" << endl;
 			}
 		}
 		else if (command == "a" || command == "A")
@@ -102,8 +110,6 @@ int main()
 			cout << "Updated List (Items: " << groceriesList02.size() << "):" << endl;
 			printVector(groceriesList02);
 		}
-		
-		command = "";
 	}
 
 	cout << endl;
