@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
-//#include <sstream>
 
 using namespace std;
+
 //Creating an ArrayList of 5 groceries
 
+//Function to easily print whole vector
 void printVector(vector<string> v)
 {
-
 	//gets vector length and iterates length amount of times
 	for (unsigned int i = 0; (i < v.size()); i++)
 	{
@@ -42,11 +42,13 @@ static void removeElementByIndex(vector<string> vector, unsigned int index)
 int main()
 {
 	//Solution 1, a fixed list of groceries
+
 	//creates a fixed string array of 5 and initiating it with string values
 	string groceriesList01[5] = { "Milk", "Bread", "Cheese", "Chocolate", "Coffee" };
 	cout << "Groceries List (Fixed String Array): " << endl;
-	//gets string array size for iterating over all array values
+
 	//using unsigned int because array->size returns unsigned int
+	//gets string array size for iterating over all array values
 	for (unsigned int i = 0; (i <= groceriesList01->size()); i++)
 	{
 		cout << groceriesList01[i] << endl;
@@ -54,8 +56,9 @@ int main()
 
 	cout << endl;
 
-	//Solution 2, a expandable list of groceries
+	//------------------------------------------------------------------------------
 
+	//Solution 2, a expandable list of groceries
 	string item; //To enter new items
 	string command; //To determine whether or not to continue adding items
 	unsigned int remove;
@@ -90,6 +93,7 @@ int main()
 			cin >> remove;
 			cout << endl;
 
+			//Checks if value is more than -1 and less than the length of the vector. Moved from previously created function due to some issues
 			if (remove > -1 || remove < groceriesList02.size())
 			{
 				groceriesList02.erase(groceriesList02.begin() + remove); //Deletes value at index
@@ -98,6 +102,7 @@ int main()
 				printVector(groceriesList02);
 			}
 
+			//If it's anything else it should be this, but when entering a char instead of an int, it causes an infinite loop.
 			else
 			{
 				cout << remove << " is an invalid Number, try again:" << endl;
